@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<html prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="shortcut icon" href="$rel_path$/media/favicon.ico" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+
+  $-- Properties to make the document conform to the open graph protocol.
+  $--   This enables generation of website previews, e.g. on facebook and slack.
+  <meta property="og:title" content="$pagetitle$" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://astade.de/$document_path$" />
+  <meta property="og:image" content="https://astade.de/media/logo.png" />
+
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <style>
+    ${ styles.html() }
+  </style>
+$for(css)$
+  $-- Current date is appended as a querying parameter to make clients update the cache after the website updates.
+  <link rel="stylesheet" href="$css$?v=$current_date$" />
+$endfor$
+$if(math)$
+  $math$
+$endif$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+
+<body>
+
+$for(include-before)$
+  $include-before$
+$endfor$
+
+<header>
+  <div class="header_content">
+    <div class="titlediv">
+      <h1 class="title">
+        <a href="$rel_path$index.html">astade.de</a>
+        <a href="$rel_path$index.html"><img class="titleicon" src="$rel_path$media/logo.png"/></a>
+      </h1>
+    </div>
+
+    <div class="navbar">
+      <div class="nav_item ${if(navbar_home)}nav_item_active${endif}">
+        <a href="$rel_path$index.html">Home</a>
+      </div>
+      <div class="nav_item ${if(navbar_download)}nav_item_active${endif}">
+        <a href="$rel_path$download.html">Download</a>
+      </div>
+      <div class="nav_item ${if(navbar_install)}nav_item_active${endif}">
+        <a href="$rel_path$install.html">Install</a>
+      </div>
+    <span class="clear"></span>
+
+  </div>
+</header>
+
+
+<div class="content">
+
+  $-- hide-header can be used to hide all divs related to ToC, title and date.
+  $if(hide-header)$
+  $else$
+  <div class="content-upper">
+    <div class="content-title-n-toc">
+      $if(date)$
+        <p class="date">$date$</p>
+      $endif$
+      <p class="content-title">$title$</p>
+    </div>
+
+    $if(toc)$
+      <div class="table_of_contents">
+        <div class="table_of_contents_header">Contents:</div>
+        $table-of-contents$
+      </div>
+    $endif$
+  </div>
+  $endif$
+
+  $body$
+</div>
+
+<footer>
+  <div class="footer_content">
+  </div>
+</footer>
+
+$for(include-after)$
+  $include-after$
+$endfor$
+
+</body>
+</html>

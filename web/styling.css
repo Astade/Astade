@@ -1,0 +1,529 @@
+:root {
+  --body_background_color: #0F0F11;
+  --content_background_color: #242424;
+  --header_background_color: #2B2D35;
+}
+
+html {
+  padding-top: -20px;
+  height: 100%;
+}
+
+body {
+  margin: auto;
+  color: white;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 140%;
+  background-color: var(--body_background_color);
+  min-width: 320px;
+  height: 100%;
+}
+
+
+/* =========
+Content including toc and article heading
+=== */
+
+.content {
+  margin: auto;
+  max-width: 900px;
+  border-left: 1px solid #979797;
+  border-right: 1px solid #979797;
+  background-color: var(--content_background_color);
+  color: #c4c4c4;
+  padding: 20px;
+  padding-bottom: 60px;
+  /* padding as high as the page header. */
+  padding-top: 151.2px;
+  /* page_height - header_height - footer_height - content_margin */
+  min-height: calc(100% - 151.2px - 71px - 60px);
+}
+
+.content-title-n-toc {
+  float: left;
+  display: block;
+}
+
+.content-title {
+  font-size: 150%;
+  margin-bottom: 20px;
+  color: #b5cea8;
+}
+
+
+/* =========
+Header styling
+=== */
+
+header {
+  border-bottom: 1px solid white;
+  background-color: var(--header_background_color);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.header_content {
+  margin: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 890px;
+  margin-bottom: -1px;
+}
+
+/* =========
+Footer styling
+=== */
+
+footer {
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid #979797;
+  background-color: var(--header_background_color);
+}
+
+.footer_content {
+  margin: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 890px;
+}
+
+.footer_site_link {
+  float: left;
+  color:rgb(220, 220, 220);
+}
+
+.footer_email {
+  float: left;
+  margin-left: 20px;
+  color:rgb(151, 151, 151);
+}
+
+.footer_scroll_up {
+  text-align: right;
+  float: right;
+  visibility: hidden;
+  cursor: pointer;
+  color:rgb(220, 220, 220);
+}
+
+/* =========
+Heading styling
+=== */
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+  text-decoration: none;
+  color: #F3F3F3;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: lighter;
+  border-bottom: 1px dotted rgb(151, 151, 151);
+  float: none;
+  color: #d7bb7d;
+  clear: both;
+}
+h2, h3, h4, h5 {
+  padding-left: 10px;
+}
+
+h1 {
+  font-size: 130%;
+  margin-top: 75px;
+}
+
+h2 {
+  font-size: 110%;
+  margin-top: 50px;
+}
+
+h3 {
+  font-size: 95%;
+  margin-top: 20px;
+}
+
+h4 {
+  font-size: 90%;
+  font-style: italic;
+}
+
+h5 {
+  font-size: 90%;
+  font-style: italic;
+}
+
+span.header-section-number {
+  display: none;
+  visibility: hidden;
+}
+
+h1.title {
+  margin: 0;
+  font-weight: lighter;
+  padding-top: 0.4em;
+  padding-bottom: 0.2em;
+  text-align: left;
+  border: none;
+  color: #F3F3F3;
+  height: 30px;
+  font-size: 32px;
+  /* min of (12% of the view port width - 16px) and (32px).
+  chose larger Xvw for font to shrink faster. */
+  font-size: min(12vw - 16px, 32px);
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.content > ol > li::marker, .content > ul > li::marker {
+  color: #f2f2f2;
+}
+
+/* should not affect the table of contents */
+.content > ol > li, .content > ul > li {
+  padding-left: 10px;
+}
+
+
+/* =========
+Paragraph styling
+=== */
+
+p {
+  clear: left;
+  line-height: 165%;
+}
+
+/* acts as a breaker before the p element */
+p:before {
+  content: "";
+  width: 10em;
+  display: block;
+  overflow: hidden;
+  /* For demonstration */
+  /* border: 1px solid green; */
+}
+
+p.title {
+  font-size: 90%;
+  width: 50%;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+p.date {
+  margin-top: -6px;
+  margin-bottom: -6px;
+  font-size: 80%;
+}
+
+/* List styling which only acts on list in content div, not on TOC */
+div.content > ol > li {
+  padding-bottom: 6px;
+}
+
+div.content > ul > li {
+  padding-bottom: 3px;
+}
+
+/* dt code {
+  font-weight: bold;
+} */
+
+dd p {
+  margin-top: 0;
+}
+
+
+.image_row {
+  display: flex;
+}
+
+.image_column {
+  flex: 33.33%;
+  padding: 15px;
+}
+
+/* =========
+Image styling
+=== */
+
+img {
+  max-width: 100%;
+}
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.maxWidth150px {
+  max-width: 150px;
+  width: 100%;
+}
+
+img.maxWidth300px {
+  max-width: 300px;
+  width: 100%;
+}
+
+img.maxWidth500px {
+  max-width: 500px;
+  width: 100%;
+}
+
+img.maxWidth600px {
+  max-width: 600px;
+  width: 100%;
+}
+
+img.maxWidth700px {
+  max-width: 700px;
+  width: 100%;
+}
+
+img.roundedCorners30px {
+  border-radius: 30px;
+}
+
+/* Was added for indoor mapping article */
+/* TODO: Own css files per article? */
+img.maxHeight68px {
+  max-height: 68px;
+  margin-bottom: 5px;
+}
+
+/* This one affects a div wrapping figure with img and caption. This is why
+ * floating right can't be done by applying a class to the image itself. */
+.imgFloatRightWidth400px {
+  float: right;
+  max-width: 400px;
+  width: 100%;
+}
+
+.imgFloatRight {
+  float: right;
+  width: 100%;
+}
+
+
+img.titleicon {
+  float: right;
+  height: 60px; /* keep legacy browser support */
+  height: min(12vw, 60px);
+}
+
+figure {
+  overflow: hidden;
+}
+
+.figureMargin {
+  /* Is the same as div.content > figure because images without
+   * caption are img tags, not figures */
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+div.content > figure {
+  /* Will not be applied to figures that are wrapped by another div, e.g. to
+   * float on the right of the page. */
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+/* =========
+Text variants
+=== */
+
+strong {
+  color: white;
+}
+
+math {
+  color: white;
+}
+
+/* mark {
+  background-color: transparent;
+  color: white;
+} */
+
+
+/* =========
+Table of contents
+=== */
+
+.table_of_contents {
+  float: right;
+  border: 2px #c4c4c4;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-family: monospace;
+  background-color: black;
+}
+
+.table_of_contents_header {
+  text-align: center;
+}
+
+.table_of_contents a {
+  color: #98e2ff;
+}
+
+.table_of_contents ul {
+  padding-left: 14px;
+  padding-right: 8px;
+  margin-bottom: 0px;
+}
+
+.table_of_contents li::marker {
+  color: transparent;
+}
+
+
+/* =========
+Link styling
+=== */
+
+a {
+  color: lightcoral;
+}
+
+
+/* =========
+Navigation bar
+=== */
+
+.navbar {
+  height: 41px;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+.nav_item {
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 30px;
+  text-align: center;
+  background-color: var(--header_background_color);
+  padding-top: 10px;
+}
+
+.nav_item a {
+  color: gray;
+  text-decoration: none;
+}
+
+.nav_item a:not(.nav_item_active a):hover {
+  color: white;
+}
+
+.nav_item_active {
+  z-index: 100;
+  border-top: 3px solid #4D88D0;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid var(--content_background_color);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  /* border-bottom: 1px solid transparent; */
+  height: 28px;
+  color: white;
+  margin-bottom: -1px;
+  background-color: var(--content_background_color);
+}
+
+.nav_item_active a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* =========
+Code layout
+=== */
+
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  /*font-size: 0.98em;*/
+}
+
+pre {
+  border: 1px dotted gray;
+  background-color: #002b36;
+  color: #dfd3d3;
+  padding: 0.5em;
+  width: fit-content;
+  /* make white box the fill width, even if code is shorter. */
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+code > span {
+  /* TODO: Somehow this doesn't do anything */
+  padding-bottom: 0px; /* -20px */
+}
+
+/*
+Acts on code tags that are in p tags. So this acts on inline code that is not in a header.
+https://www.w3schools.com/css/css_combinators.asp */
+p > code, li > code  {
+  background-color: rgb(10, 10, 10);
+  border-radius: 3px;
+  border-color: white;
+  border-width: 1px;
+  color: #E8E8E8;
+  padding: 3px;
+}
+
+
+
+/* =========
+Various Stuff
+=== */
+
+span.clear {
+  clear: left; display: block;
+}
+
+
+
+
+/* =========
+Blockquotes
+=== */
+
+blockquote {
+  border-left: 3px solid #ccc;
+  margin-left: 5px;
+  /* margin: 1.5em 10px; */
+  /* padding: 0.5em 10px; */
+}
+
+blockquote p {
+  display: inline-block;
+  padding-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #83a3a4;
+}
