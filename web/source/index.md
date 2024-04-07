@@ -16,7 +16,7 @@ Astade, an UML tool for the complete C or C++ development process
 design
 ------
 
-![draw an idear](media/idea.png)
+![draw an idea](media/idea.png)
 
 architecture
 ------------
@@ -26,6 +26,6 @@ architecture
 implementation
 --------------
 
-![generate the code](media/implementation.png)
+![generate the code and the documentation](media/implementation.png)
 
 
