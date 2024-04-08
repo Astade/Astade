@@ -1,8 +1,5 @@
 ---
 title: Screenshots
-keywords:
-- keyword 1
-- keyword 2
 lang: en
 
 toc: true

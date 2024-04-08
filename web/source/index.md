@@ -1,8 +1,9 @@
 ---
 title: Home
 keywords:
-- keyword 1
-- keyword 2
+- design
+- architecture
+- implementation
 lang: en
 
 toc: true

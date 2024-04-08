@@ -1,8 +1,7 @@
 ---
 title: Install
 keywords:
-- keyword 1
-- keyword 2
+- Ubuntu
 lang: en
 
 toc: true
