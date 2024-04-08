@@ -1,7 +1,9 @@
 :root {
-  --body_background_color: #0F0F11;
-  --content_background_color: #242424;
-  --header_background_color: #2B2D35;
+    --body_background_color: background: #45435c;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,67,92,1) 0%, rgba(88,110,154,1) 100%);
+    --content_background_color: #F3F2F3;
+    --header_background_color: #586e9a;
+
 }
 
 html {
@@ -10,14 +12,15 @@ html {
 }
 
 body {
-  margin: auto;
-  color: white;
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 140%;
-  background-color: var(--body_background_color);
-  min-width: 320px;
-  height: 100%;
+    margin: auto;
+    color: white;
+    font-family: Devanagari Sangam MN;
+    font-size: 100%;
+    line-height: 140%;
+    background-color: var(--body_background_color);
+    min-width: 320px;
+    height: 100%;
+
 }
 
 
@@ -26,18 +29,17 @@ Content including toc and article heading
 === */
 
 .content {
-  margin: auto;
-  max-width: 900px;
-  border-left: 1px solid #979797;
-  border-right: 1px solid #979797;
-  background-color: var(--content_background_color);
-  color: #c4c4c4;
-  padding: 20px;
-  padding-bottom: 60px;
-  /* padding as high as the page header. */
-  padding-top: 151.2px;
-  /* page_height - header_height - footer_height - content_margin */
-  min-height: calc(100% - 151.2px - 71px - 60px);
+    margin: auto;
+    max-width: 900px;
+    border-left: 0px solid #979797;
+    border-right: 0px solid #979797;
+    background-color: var(--content_background_color);
+    color: #857372;
+    padding: 20px;
+    padding-bottom: 60px;
+    padding-top: 151.2px;
+    min-height: calc(100% - 151.2px - 71px - 60px);
+
 }
 
 .content-title-n-toc {
@@ -46,9 +48,10 @@ Content including toc and article heading
 }
 
 .content-title {
-  font-size: 150%;
-  margin-bottom: 20px;
-  color: #b5cea8;
+    font-size: 150%;
+    margin-bottom: 20px;
+    color: #857372;
+
 }
 
 
@@ -78,10 +81,12 @@ Footer styling
 === */
 
 footer {
-  width: 100%;
-  height: 70px;
-  border-top: 1px solid #979797;
-  background-color: var(--header_background_color);
+    width: 100%;
+    height: 70px;
+    border-top: 0px solid #979797;
+    background-color: var(--body_background_color);
+
+
 }
 
 .footer_content {
@@ -116,23 +121,26 @@ Heading styling
 === */
 
 h1 a, h2 a, h3 a, h4 a, h5 a {
-  text-decoration: none;
-  color: #F3F3F3;
+    text-decoration: none;
+    color: #45383f;
+
 }
 h1, h2, h3, h4, h5 {
-  font-weight: lighter;
-  border-bottom: 1px dotted rgb(151, 151, 151);
-  float: none;
-  color: #d7bb7d;
-  clear: both;
+    font-weight: lighter;
+    border-bottom: 1px dotted rgb(151, 151, 151);
+    float: none;
+    color: #45383f;
+    clear: both;
+
 }
 h2, h3, h4, h5 {
   padding-left: 10px;
 }
 
 h1 {
-  font-size: 130%;
-  margin-top: 75px;
+    font-size: 130%;
+    margin-top: 75px;
+
 }
 
 h2 {
@@ -161,18 +169,18 @@ span.header-section-number {
 }
 
 h1.title {
-  margin: 0;
-  font-weight: lighter;
-  padding-top: 0.4em;
-  padding-bottom: 0.2em;
-  text-align: left;
-  border: none;
-  color: #F3F3F3;
-  height: 30px;
-  font-size: 32px;
-  /* min of (12% of the view port width - 16px) and (32px).
-  chose larger Xvw for font to shrink faster. */
-  font-size: min(12vw - 16px, 32px);
+    margin: 0;
+    font-weight: lighter;
+    padding-top: 0.4em;
+    padding-bottom: 0.2em;
+    text-align: left;
+    font-family: Hiragino Mincho ProN;
+    border: none;
+    color: #F3F3F3;
+    height: 30px;
+    font-size: 32px;
+    font-size: min(12vw - 16px, 45px);
+
 }
 
 hr {
@@ -255,6 +263,9 @@ Image styling
 
 img {
   max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img.centered {
@@ -366,13 +377,14 @@ Table of contents
 === */
 
 .table_of_contents {
-  float: right;
-  border: 2px #c4c4c4;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  padding: 20px;
-  font-family: monospace;
-  background-color: black;
+    float: right;
+    border: 2px #c4c4c4;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    /* font-family: monospace; */
+    background-color: rgba(69, 67, 92, 0.25);
+
 }
 
 .table_of_contents_header {
@@ -380,7 +392,8 @@ Table of contents
 }
 
 .table_of_contents a {
-  color: #98e2ff;
+    color: #586e9a;
+
 }
 
 .table_of_contents ul {
@@ -399,7 +412,8 @@ Link styling
 === */
 
 a {
-  color: lightcoral;
+    color: lightcoral;
+
 }
 
 
@@ -424,8 +438,9 @@ Navigation bar
 }
 
 .nav_item a {
-  color: gray;
-  text-decoration: none;
+    color: #45435c;
+    text-decoration: none;
+
 }
 
 .nav_item a:not(.nav_item_active a):hover {
@@ -448,8 +463,10 @@ Navigation bar
 }
 
 .nav_item_active a {
-  color: white;
-  text-decoration: none;
+    color: #857372;
+    text-decoration: none;
+    /* font-family: Hiragino Mincho ProN; */
+
 }
 
 
