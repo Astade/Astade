@@ -7,10 +7,8 @@ toc: false
 navbar_legal: true
 ---
 
+Responsible for Content:  
 Thomas Spitzer  
-Karlstraße 45a  
-64283 Darmstadt  
-
 <projektleiter@astade.de>
 
 Liability for Content
