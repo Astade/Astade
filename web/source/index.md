@@ -28,4 +28,7 @@ implementation
 
 ![generate the code and the documentation](media/implementation.png)
 
+Continious integration
+----------------------
 
+You can reach our Continious integration Server here: [Jenkins](http://dev.astade.de)
