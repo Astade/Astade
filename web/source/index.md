@@ -31,4 +31,4 @@ implementation
 Continious integration
 ----------------------
 
-You can reach our Continious integration Server here: [Jenkins](http://dev.astade.de)
+You can reach our Continious Integration Server here: [Jenkins](http://dev.astade.de)
