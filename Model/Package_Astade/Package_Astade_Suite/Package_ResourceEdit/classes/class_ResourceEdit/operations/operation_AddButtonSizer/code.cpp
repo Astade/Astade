@@ -1,7 +1,7 @@
 //~~ void AddButtonSizer(wxSizer* topSizer, bool hasTracelevel = false, bool hasLanguageSelection = false, bool hasNamespaceSelection = false) [ResourceEdit] ~~
 
 wxBoxSizer *button_sizer = new wxBoxSizer(wxHORIZONTAL);
-topSizer->Add(button_sizer, 0, wxEXPAND|wxALL|wxALIGN_BOTTOM, 10);
+topSizer->Add(button_sizer, 0, wxEXPAND|wxALL, 10);
 
 if (hasTracelevel)
 {
@@ -41,4 +41,4 @@ button_sizer->Add(new wxButton(this, wxID_CANCEL), 0);
 
 button_sizer->AddSpacer(10);
 
-button_sizer->Add(new wxButton(this, wxID_OK), 0, wxALIGN_RIGHT);
+button_sizer->Add(new wxButton(this, wxID_OK), 0);
