@@ -12,7 +12,7 @@
 BEGIN_EVENT_TABLE(ResourceEdit, wxDialog)
 
 	EVT_CLOSE(ResourceEdit::ResourceEditClose)
-	EVT_INIT_DIALOG(ResourceEdit::InitDialog)
+	EVT_INIT_DIALOG(ResourceEdit::Init)
 	EVT_BUTTON(wxID_CANCEL,			ResourceEdit::Cancel)
 	EVT_BUTTON(wxID_OK,				ResourceEdit::Save)
 	EVT_CHECKBOX(ID_VIRTUAL,		ResourceEdit::TouchVirtual)

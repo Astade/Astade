@@ -53,3 +53,8 @@ apt-get install astade
 ```
 
 Voila. 
+
+Install in Windows
+------------------
+
+Currently we do not build a Version for Windows. An Windows Installer for an older Release you find here: [Astade-setup-1.4.0.exe](https://astade.de/download/Astade-setup-1.4.0.exe)
