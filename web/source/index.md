@@ -162,5 +162,5 @@ Astade is open-source software.
 The source code is available on GitHub, allowing developers
 to inspect, build, modify, and contribute to the project.
 
-[Visit the Astade GitHub Repository](https://github.com/alars/Astade)
+[Visit the Astade GitHub Repository](https://github.com/Astade/Astade/)
 
