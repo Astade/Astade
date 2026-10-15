@@ -13,7 +13,7 @@ if (!identifyRegEx.IsValid() || !errorLineRegEx.IsValid() || !errorFileRegEx.IsV
 if (identifyRegEx.Matches(parseLine) && errorLineRegEx.Matches(parseLine) && errorFileRegEx.Matches(parseLine))
 {
 	m_errorFile = errorFileRegEx.GetMatch(parseLine, 1);
-	m_errorFile.Normalize(wxPATH_NORM_ALL,activeConfiguration.GetPath());
+	m_errorFile.Normalize(AllPathFlags,activeConfiguration.GetPath());
 	
 	if (!m_errorFile.FileExists())
 	{
@@ -21,7 +21,7 @@ if (identifyRegEx.Matches(parseLine) && errorLineRegEx.Matches(parseLine) && err
 		m_errorFile.Assign(nameOnly);
 		m_errorFile.AppendDir(wxS(".."));
 		m_errorFile.AppendDir(wxS("auto"));
-		m_errorFile.Normalize(wxPATH_NORM_ALL,activeConfiguration.GetPath());
+		m_errorFile.Normalize(AllPathFlags,activeConfiguration.GetPath());
 	}
 	
 	if (!m_errorFile.FileExists())
@@ -30,7 +30,7 @@ if (identifyRegEx.Matches(parseLine) && errorLineRegEx.Matches(parseLine) && err
 		m_errorFile.Assign(nameOnly);
 		m_errorFile.AppendDir(wxS(".."));
 		m_errorFile.AppendDir(wxS("manual"));
-		m_errorFile.Normalize(wxPATH_NORM_ALL,activeConfiguration.GetPath());
+		m_errorFile.Normalize(AllPathFlags,activeConfiguration.GetPath());
 	}
 	
 	if (!m_errorFile.FileExists())

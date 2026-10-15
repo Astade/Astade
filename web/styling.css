@@ -359,7 +359,8 @@ Text variants
 === */
 
 strong {
-  color: white;
+    font-weight: 600;
+    color: #45383f;
 }
 
 math {

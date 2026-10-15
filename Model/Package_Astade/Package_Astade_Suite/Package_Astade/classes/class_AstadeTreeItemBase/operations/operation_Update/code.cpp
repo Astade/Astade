@@ -14,14 +14,14 @@ else
 	theFont.SetUnderlined(false);
 
 if (GetLabelIsBold())
-	theFont.SetWeight(wxBOLD);
+	theFont.SetWeight(wxFONTWEIGHT_BOLD);
 else
-	theFont.SetWeight(wxNORMAL);
+	theFont.SetWeight(wxFONTWEIGHT_NORMAL);
 
 if (GetLabelIsItalic())
-	theFont.SetStyle(wxITALIC);
+	theFont.SetStyle(wxFONTSTYLE_ITALIC);
 else
-	theFont.SetStyle(wxNORMAL);
+	theFont.SetStyle(wxFONTSTYLE_NORMAL);
 
 ourTree->SetItemHasChildren(GetId(), myModelElement->HasChildren());
 ourTree->SetItemFont(GetId(), theFont);

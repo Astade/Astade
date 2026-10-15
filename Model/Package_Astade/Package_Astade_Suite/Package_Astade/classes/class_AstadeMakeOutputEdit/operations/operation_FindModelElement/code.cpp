@@ -26,7 +26,7 @@ while (--lineSearch > 0)
 		wxConfigBase* theConfig = wxConfigBase::Get();
 		wxString ModelPath = theConfig->Read(wxS("TreeView/ModelPath"));
 		m_modelFile = theLine.Mid(3, end - 3);
-		m_modelFile.Normalize(wxPATH_NORM_ALL, ModelPath);
+		m_modelFile.Normalize(AllPathFlags, ModelPath);
 		m_modelLine = count;
 		return true;
 	}
