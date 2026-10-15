@@ -106,7 +106,7 @@ and maintain substantial real-world software projects.
 
 The complete source code is publicly available on GitHub:
 
-[Astade on GitHub](https://github.com/alars/Astade)
+[Astade on GitHub](https://github.com/Astade/Astade/)
 
 Continuous Integration
 ----------------------
